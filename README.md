@@ -1,6 +1,6 @@
 # Creación de Contenedores
 
-Es importante destacar que es recomendable crear los siguientes archivos en una sola ubicación, como una carpeta, para evitar confusiones.
+Es importante destacar que es recomendable crear los siguientes archivos en una sola ubicación, como una carpeta en este caso llame a la carpeta "SERVICIOS_CLOUD" , para evitar confusiones.
 
 ## 1. Código
 
@@ -20,18 +20,18 @@ el anterior código fue guardado de la siguiente forma: hola.py
 
 ## 2. DockFile
 
-EL DockerFile son nuestras instrucciones, en este caso al utilizar pyrhon necesitamos utilizar la imagen de python, a continuación se  muestra el contenido:
+EL DockerFile son nuestras instrucciones, en este caso al utilizar python necesitamos utilizar la imagen de python, a continuación se  muestra el contenido:
 
 
 ```
 # dockerfile
 
 FROM python:3
-WORKDIR /Act
-COPY ./Act /Act
+WORKDIR /SERVICIOS_CLOUD
+COPY . /SERVICIOS_CLOUD
 CMD ["python3", "hola.py"]
 
-#"Act" hace referencia a la carpeta donde se encuentra nuestro código, en este caso "hola.py"
+# /SERVICIOS_CLOUD hace referencia a la carpeta donde se encuentra tanto nuestro Dockefile como nuestro código de python
 
 ```
 ## 3. Crear y Ejecutar
